@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Website</title>
+    <link rel="stylesheet" href="app.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+
+    <header>
+        
+        <h1>Something Name</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sidebar">
+        <div class="section">
+            <h2>Filter by Horsepower</h2>
+            <button onclick="displayArticlesByHorsepower(0, Infinity)">All</button>
+            <button onclick="displayArticlesByHorsepower(0, 200)">Below 200 HP</button>
+            <button onclick="displayArticlesByHorsepower(200, 300)">200-300 HP</button>
+            <button onclick="displayArticlesByHorsepower(300, 400)">300-400 HP</button>
+            <button onclick="displayArticlesByHorsepower(400, Infinity)">Above 400 HP</button>
+        </div>
+
+        <div class="section">
+            <h2>Filter by Fastest Speed</h2>
+            <button onclick="filterByMaxSpeed(0, Infinity)">All</button>
+            <button onclick="filterByMaxSpeed(0, 130)">Below 130 mph</button>
+            <button onclick="filterByMaxSpeed(130, 150)">130-150 mph</button>
+            <button onclick="filterByMaxSpeed(150, Infinity)">Above 150 mph</button>
+        </div>
+
+        <div class="section">
+            <h2>Filter by Price</h2>
+            <button onclick="filterByPrice(0, Infinity)">All</button>
+            <button onclick="filterByPrice(0, 20000)">Below $20,000</button>
+            <button onclick="filterByPrice(20000, 30000)">$20,000 - $30,000</button>
+            <button onclick="filterByPrice(30000, 40000)">$30,000 - $40,000</button>
+            <button onclick="filterByPrice(40000, 50000)">$40,000 - $50,000</button>
+            <button onclick="filterByPrice(50000, 60000)">$50,000 - $60,000</button>
+            <button onclick="filterByPrice(60000, Infinity)">Above $60,000</button>
+        </div>
+    </div>
+    
+        <section id="car-list">
+        
+            <article class="car">
+                <h2>BMW 3 Series</h2>
+                <img src="Images/BMW 3 Series.jpeg" alt="BMW 3 Series image missing">
+                <p><strong>Horsepower:</strong> 255 hp</p>
+                <p><strong>Fastest Speed:</strong> 155 mph</p>
+                <p><strong>Price:</strong> $60,595</p>
+            </article>
+        
+            <article class="car">
+                <h2>Audi Q5</h2>
+                <p><strong>Horsepower:</strong> 261 hp</p>
+                <p><strong>Fastest Speed:</strong> 130 mph</p>
+                <p><strong>Price:</strong> $61,595</p>
+            </article>
+        
+            <article class="car">
+                <h2>Mercedes-Benz E-Class</h2>
+                <p><strong>Horsepower:</strong> 255 hp</p>
+                <p><strong>Fastest Speed:</strong> 130 mph</p>
+                <p><strong>Price:</strong> $56,750</p>
+            </article>
+        
+            <article class="car">
+                <h2>Subaru Outback</h2>
+                <p><strong>Horsepower:</strong> 182 hp</p>
+                <p><strong>Fastest Speed:</strong> 130 mph</p>
+                <p><strong>Price:</strong> $28,895</p>
+            </article>
+
+            <article class="car">
+                    <h2>Tesla Model S</h2>
+                    <p><strong>Horsepower:</strong> 670 hp</p>
+                    <p><strong>Fastest Speed:</strong> 200 mph</p>
+                    <p><strong>Price:</strong> $79,990</p>
+            </article>
+            
+            <article class="car">
+                    <h2>Toyota Camry</h2>
+                    <p><strong>Horsepower:</strong> 203 hp</p>
+                   <p><strong>Fastest Speed:</strong> 133 mph</p>
+                    <p><strong>Price:</strong> $25,965</p>
+            </article>
+            
+           <article class="car">
+                    <h2>Ford Mustang</h2>
+                    <p><strong>Horsepower:</strong> 460 hp</p>
+                    <p><strong>Fastest Speed:</strong> 180 mph</p>
+                    <p><strong>Price:</strong> $42,450</p>
+            </article>
+    
+            <article class="car">
+                    <h2>BMW M5</h2>
+                    <p><strong>Horsepower:</strong> 617 hp</p>
+                    <p><strong>Fastest Speed:</strong> 190 mph</p>
+                    <p><strong>Price:</strong> $104,495</p>
+            </article>
+            
+            <article class="car">
+                    <h2>Tesla Model S</h2>
+                    <p><strong>Horsepower:</strong> 670 hp</p>
+                    <p><strong>Fastest Speed:</strong> 200 mph</p>
+                    <p><strong>Price:</strong> $79,990</p>
+            </article>
+            
+            <article class="car">
+                    <h2>Toyota Camry</h2>
+                    <p><strong>Horsepower:</strong> 203 hp</p>
+                    <p><strong>Fastest Speed:</strong> 133 mph</p>
+                    <p><strong>Price:</strong> $25,965</p>
+            </article>
+            
+            <article class="car">
+                    <h2>Ford Mustang</h2>
+                    <p><strong>Horsepower:</strong> 460 hp</p>
+                    <p><strong>Fastest Speed:</strong> 180 mph</p>
+                    <p><strong>Price:</strong> $42,450</p>
+            </article>
+            
+            <article class="car">
+                    <h2>BMW M5</h2>
+                    <p><strong>Horsepower:</strong> 617 hp</p>
+                    <p><strong>Fastest Speed:</strong> 190 mph</p>
+                    <p><strong>Price:</strong> $104,495</p>
+            </article>
+            
+            <article class="car">
+                    <h2>Audi A4</h2>
+                    <p><strong>Horsepower:</strong> 248 hp</p>
+                    <p><strong>Fastest Speed:</strong> 155 mph</p>
+                    <p><strong>Price:</strong> $39,100</p>
+            </article>
+            
+            <article class="car">
+                    <h2>Chevrolet Corvette</h2>
+                    <p><strong>Horsepower:</strong> 490 hp</p>
+                    <p><strong>Fastest Speed:</strong> 184 mph</p>
+                    <p><strong>Price:</strong> $60,995</p>
+            </article>
+            
+                <article class="car">
+                    <h2>Nissan Altima</h2>
+                    <p><strong>Horsepower:</strong> 188 hp</p>
+                    <p><strong>Fastest Speed:</strong> 125 mph</p>
+                    <p><strong>Price:</strong> $24,300</p>
+                </article>
+            
+                <article class="car">
+                    <h2>Lamborghini Aventador</h2>
+                    <p><strong>Horsepower:</strong> 730 hp</p>
+                    <p><strong>Fastest Speed:</strong> 217 mph</p>
+                    <p><strong>Price:</strong> $393,695</p>
+                </article>
+            
+                <article class="car">
+                    <h2>Mercedes-Benz E-Class</h2>
+                    <p><strong>Horsepower:</strong> 362 hp</p>
+                    <p><strong>Fastest Speed:</strong> 130 mph</p>
+                    <p><strong>Price:</strong> $54,250</p>
+                </article>
+            
+                <article class="car">
+                    <h2>Subaru Outback</h2>
+                    <p><strong>Horsepower:</strong> 182 hp</p>
+                    <p><strong>Fastest Speed:</strong> 130 mph</p>
+                    <p><strong>Price:</strong> $26,795</p>
+                </article>
+            
+                <article class="car">
+                    <h2>Honda Accord</h2>
+                    <p><strong>Horsepower:</strong> 192 hp</p>
+                    <p><strong>Fastest Speed:</strong> 115 mph</p>
+                    <p><strong>Price:</strong> $24,970</p>
+                </article>
+            
+                <article class="car">
+                    <h2>Ferrari 488 GTB</h2>
+                    <p><strong>Horsepower:</strong> 661 hp</p>
+                    <p><strong>Fastest Speed:</strong> 205 mph</p>
+                    <p><strong>Price:</strong> $333,000</p>
+                </article>
+            
+                <article class="car">
+                    <h2>Jeep Wrangler</h2>
+                    <p><strong>Horsepower:</strong> 285 hp</p>
+                    <p><strong>Fastest Speed:</strong> 120 mph</p>
+                    <p><strong>Price:</strong> $28,295</p>
+                </article>
+            
+                <article class="car">
+                    <h2>Volkswagen Golf</h2>
+                    <p><strong>Horsepower:</strong> 147 hp</p>
+                    <p><strong>Fastest Speed:</strong> 125 mph</p>
+                    <p><strong>Price:</strong> $23,195</p>
+                </article>
+            
+                <article class="car">
+                    <h2>Porsche 911 Carrera</h2>
+                    <p><strong>Horsepower:</strong> 379 hp</p>
+                    <p><strong>Fastest Speed:</strong> 182 mph</p>
+                    <p><strong>Price:</strong> $99,200</p>
+                </article>
+            
+                <article class="car">
+                    <h2>Hyundai Sonata</h2>
+                    <p><strong>Horsepower:</strong> 191 hp</p>
+                    <p><strong>Fastest Speed:</strong> 121 mph</p>
+                    <p><strong>Price:</strong> $24,875</p>
+                </article>
+                <!-- Add more cars here -->
+            </section>
+            
+        
+            <!-- Add more cars here as needed -->
+        </section>
+        
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Car Website. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script> <!-- Link to your JavaScript file -->
+</body>
+
+</html>
